@@ -5,6 +5,44 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Estilo para o plugin slick  */
+.slick-dotted ul {
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.slick-dotted li {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.slick-dotted button:focus {
+  outline: 0;
+}
+
+.slick-dotted li button {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  color: #d8d8d8;
+  border-width: 0;
+  background: #d8d8d8;
+  opacity: 1;
+  cursor: pointer;
+}
+
+li.slick-active button {
+  background: #688293;
+  color: #688293;
+}
+
+.slick-slide:focus {
+  outline: none;
+}
+/* fim do estilo para o plugin  */
+
 .clear {
   clear: both;
 }
@@ -155,11 +193,11 @@ section.perfil-container {
 }
 
 section.perfil-container .container {
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 section.perfil-container .perfil-wraper {
-  padding-top: 60%;
+  padding-top: 50%;
   position: relative;
 }
 
@@ -191,20 +229,21 @@ section.perfil-container .texto-perfil h2 {
 }
 
 section.perfil-container .texto-perfil p {
-  color: #4b4b4b;
+  color: rgb(190, 190, 190);
   font-size: 14px;
   margin-top: 8px;
+  line-height: 24px;
 }
 
 section.videos {
-  padding: 0 50px 0;
+  padding: 50px 0;
 }
 
 section.videos .box-video {
   float: left;
   width: 33.3%;
   position: relative;
-  border: 5px solid transparent;
+  border: 5px solid white;
   padding-top: calc(33.3% * 0.6);
 }
 
@@ -269,7 +308,7 @@ section.depoimentos .depoimento-single {
 
 .depoimento-single quote {
   font-size: 15px;
-  color: #4b4b4b;
+  color: #b4b4b4;
 }
 
 .depoimento-single .nome-depoimento {
@@ -279,6 +318,9 @@ section.depoimentos .depoimento-single {
 .nome-depoimento img {
   width: 32px;
   height: 32px;
+  position: relative;
+  top: 30px;
+  left: 80px;
   border-radius: 16px;
 }
 
@@ -441,6 +483,33 @@ footer .footer-block {
   }
 }
 
+@media screen and (max-width: 850px) {
+  section.perfil-container .perfil-wraper {
+    padding-top: 0;
+  }
+
+  section.perfil-container .perfil-wraper2 {
+    height: auto;
+    position: static;
+    display: inline-block;
+    text-align: center;
+  }
+
+  section.perfil-container .img-perfil {
+    width: 50%;
+    padding-top: 70%;
+    display: inline-block;
+    height: auto;
+  }
+
+  section.perfil-container .texto-perfil {
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+    padding: 80px 30px 30px 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   nav.menu-desktop {
     display: none;
@@ -472,31 +541,6 @@ footer .footer-block {
     padding: 40px 2%;
   }
 
-  section.perfil-container .perfil-wraper {
-    padding-top: 0;
-  }
-
-  section.perfil-container .perfil-wraper2 {
-    height: auto;
-    position: static;
-    display: inline-block;
-    text-align: center;
-  }
-
-  section.perfil-container .img-perfil {
-    width: 50%;
-    padding-top: 70%;
-    display: inline-block;
-    height: auto;
-  }
-
-  section.perfil-container .texto-perfil {
-    display: inline-block;
-    text-align: justify;
-    width: 100%;
-    padding: 0 30px;
-  }
-
   section.videos {
     text-align: center;
   }
@@ -504,6 +548,7 @@ footer .footer-block {
   section.videos .box-video {
     float: none;
     width: 70%;
+    margin-top: 30px;
     display: inline-block;
     padding-top: calc(70% * 0.6);
   }
@@ -548,4 +593,38 @@ footer .footer-block {
   header .logo img {
     width: 200px;
   }
+}
+
+@media screen and (max-width: 393px) {
+  .nome-depoimento img {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 30px;
+    left: 65px;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nome-depoimento img {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 30px;
+    left: 55px;
+    border-radius: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nome-depoimento img {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 30px;
+    left: 35px;
+    border-radius: 16px;
+  }
+  
 }
